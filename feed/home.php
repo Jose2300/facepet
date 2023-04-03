@@ -20,13 +20,15 @@
    <div class="input-group mb-3">
   <img class="perfil" src="https://www.imagensempng.com.br/wp-content/uploads/2021/09/Icone-usuario-Png-1024x1024.png">
   <input type="text" class="form-control" placeholder="O que está pensando sobre seu pet hoje?" aria-label="Username" aria-describedby="basic-addon1">
-  <a href="http://localhost/chat/feed/publica.php"><button>Publicar</button></a>
+  <a href="http://localhost/chat/feed/publica.php"><button class="botao-colorido">Publicar</button></a>
   </div>
 
 
     </div>
 	<div class="chat"> 
-      <img id="lchat" src="http://localhost/chat/img/chat.png">
+   <a onclick="carregarChat()"><img id="lchat" src="http://localhost/chat/img/chat.png"></a>
+   </div>
+   <div id="resultado">
    </div>
    <div class="container">
 	<div class="card">
@@ -40,6 +42,7 @@
 		<ul>
 	</div>
   </div>
+  <script src="default.js"></script>
   
 </body>
 </html>
