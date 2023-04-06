@@ -10,7 +10,7 @@
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <img src="https://previews.123rf.com/images/arbuzu/arbuzu1505/arbuzu150500003/40047867-letter-p-logo-icon-design-template-elements.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-      FACEPET
+      Pet Face
     </a>
   </div>
 </nav>
@@ -32,6 +32,8 @@
    </div>
    <div class="container">
 	<div class="card">
+  <img class="perfil" src="https://www.imagensempng.com.br/wp-content/uploads/2021/09/Icone-usuario-Png-1024x1024.png">
+    <button>+seguir</button>
 		<img src="https://via.placeholder.com/150" alt="Imagem do Card">
 		<h3>Título do Card</h3>
 		<p>Descrição do Card</p>

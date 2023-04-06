@@ -8,6 +8,9 @@ body{
    
    
 }
+ul li{
+    display: inline;
+}
 
 #resultado{
     grid-column: 3;
@@ -44,7 +47,7 @@ body{
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
-    grid-column: 3;
+    grid-column: 2;
 }
 
 .card {
