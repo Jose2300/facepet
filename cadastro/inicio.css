@@ -8,7 +8,7 @@ body {
   
   /* Define o formulário como uma div flexível */
   form {
-    display: flex;
+    display: block;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -17,4 +17,6 @@ body {
     border-radius: 10px;
     box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
   }
-  
+#passo2{
+  display: none;
+}

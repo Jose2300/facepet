@@ -17,10 +17,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$sql = "INSERT INTO cadastro  (email, senha) VALUES ('$email', '$senha')";
 	if (mysqli_query($conn, $sql)) {
 		echo "Cadastro realizado com sucesso!";
+		echo '<button><a onclick="carregar()">Clique aqui</a></button>';
 	} else {
 		echo "Erro ao cadastrar o usuário: " . mysqli_error($conn);
 	}
 
 	mysqli_close($conn);
 }
+ 
 ?>
+

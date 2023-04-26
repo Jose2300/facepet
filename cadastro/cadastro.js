@@ -1,4 +1,4 @@
-function carregarPerfil() {
+function carregar() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
@@ -6,31 +6,39 @@ function carregarPerfil() {
       }
     };
     xhttp.open("GET", "http://localhost/chat/cadastro/perfil.php", true);
-    xhttp.send();}
-// Sua chave de API do Imgur
-const client_id = "1f474406443e3f4";
+    xhttp.send();
 
-// URL do endpoint de upload de imagem
-const url = "https://api.imgur.com/3/image";
+ }
 
-// Arquivo de imagem que deseja fazer upload
-const imagem = document.getElementById("imagem").files[0];
+  function mudarDisplay(){
+    const form = document.getElementById('form');
+    
+    if (form.style.display === "none") {
+      form.style.display = "block";
+    } else{
+      form.style.display = "none";
+    }
+    
+  
+    form.addEventListener('submit', function(e) {
+        e.preventDefault(); // previne o comportamento padrão de submit
 
-// Cria um objeto FormData para enviar a imagem
-const formData = new FormData();
-formData.append("image", imagem);
+        const formData = new FormData(form);
 
-// Envia a solicitação de upload para a API do Imgur
-axios.post(url, formData, {
-  headers: {
-    Authorization: `Client-ID ${client_id}`,
-    "content-type": "multipart/form-data",
-  },
-})
-  .then((resposta) => {
-    const link_imagem = resposta.data.data.link;
-    console.log("A imagem foi enviada com sucesso: ", link_imagem);
-  })
-  .catch((erro) => {
-    console.log("O upload da imagem falhou: ", erro.response.data.data.error);
-  });
+        fetch('cadastro.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+            // atualiza o conteúdo da página com a resposta recebida
+            document.getElementById("passo1").innerHTML = data;
+        })
+        .catch(error => {
+            console.error(error);
+        });
+    });
+
+  }
+  
+  
